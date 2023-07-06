@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="stylehotel.css">
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Access the elements using JavaScript
+            const navItems = document.querySelectorAll('.textbutton ul li');
+            const header = document.querySelector('header');
+            const buttonLinks = document.querySelectorAll('.button a');
+            const lastButtonLinks = document.querySelectorAll('.lastbutton ul li a');
+
+            // Add event listeners or perform desired actions
+            navItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    // Perform actions on navigation item click
+                });
+            });
+
+            // Example: Change header text when button links are clicked
+            buttonLinks.forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    header.textContent = link.innerText;
+                });
+            });
+
+            // Example: Alert the selected guest on last button link click
+            lastButtonLinks.forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const selectedGuest = link.innerText;
+                    alert(`Selected guest: ${selectedGuest}`);
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <nav class="textbutton">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#tours">TOURS</a></li>
+            <li><a href="#hotels">HOTELS</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACTS</a></li>
+        </ul>
+    </nav>
+    
+    <header>TOUR & TRAVELS</header>
+
+    <main>
+        <div>
+            <h3>EXPLORE THE WORLD WITH US</h3>
+            <H1>
+                World Travel Agency</H1>
+        </div>
+
+        <section class="button">
+            <span><a href="flight">Flight</a></span>
+            <span><a href="#hotel">Hotel</a></span>
+            <span><a href="car-rent">Car-rent</a></span>
+            <span><a href="cruises">Cruises</a></span>
+        </section>
+    
+
+<div class="lastbutton">
+        <ul>
+            <li><a href="#where">Where</a></li>
+            <li><a href="check-in">Check-in</a></li>
+            <li><a href="check-out">Chech-out</a></li>
+            <li><a href="guest">Guest</a></li>  
+        </ul>
+</div>
+</main>
+
+<footer class="footer">[2023] Somu Sarkar. [All Rights Reserved]</footer>
+</body>
+</html>
